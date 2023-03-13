@@ -1,5 +1,6 @@
 <?php
- $password_length=rand(10,20)
+ $password_length=rand(10,20);
+ $_GET["password_length"]=$password_length;
 ?>
 
 
@@ -17,11 +18,12 @@
 <body>
   
   <?php include_once __DIR__."./functions/function.php" ?>
-  <?php include_once __DIR__."./session/sessionstart.php" ?>
-  <?php include_once __DIR__."./session/destroysession.php" ?>
+  
+
+
 
  
- <form method="GET" class="row g-3 d-flex align-items-center justify-content-center p-5">
+ <form method="GET" action="./session/sessionstart.php" class="row g-3 d-flex align-items-center justify-content-center p-5">
   <div class="mb-5 text-center">
     <h5>La tua nuova password è:</h5>
    <label for="exampleFormControlTextarea1" class="form-label">
@@ -30,7 +32,6 @@
      <?php  
       session_start();
       $_SESSION["password"]=$password;
-      header('Location:./session/sessionstart.php');
      ?>
     </textarea>
   </div>

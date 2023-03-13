@@ -1,3 +1,8 @@
+<?php
+ $password_length=rand(10,20)
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +16,7 @@
 </head>
 <body>
 
- <form method="GET" class="row g-3 d-flex align-items-center justify-content-center">
+ <form method="GET" class="row g-3 d-flex align-items-center justify-content-center p-5">
   <div class="mb-5 text-center">
     <h5>La tua nuova password è:</h5>
    <label for="exampleFormControlTextarea1" class="form-label">
@@ -20,7 +25,7 @@
      <?php  
       $caracters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
       $mixcaracters= str_shuffle($caracters);
-      $password = substr($mixcaracters,0,20);
+      $password = substr($mixcaracters,0,$password_length);
       echo $password;
      ?>
     </textarea>

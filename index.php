@@ -30,6 +30,7 @@
      <?php  
       session_start();
       $_SESSION["password"]=$password;
+      header('Location:./session/sessionstart.php');
      ?>
     </textarea>
   </div>

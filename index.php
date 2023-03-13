@@ -15,6 +15,8 @@
 
 </head>
 <body>
+  
+  <?php include_once __DIR__."./functions/function.php" ?>
 
  <form method="GET" class="row g-3 d-flex align-items-center justify-content-center p-5">
   <div class="mb-5 text-center">
@@ -23,9 +25,6 @@
    </label>
    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">
      <?php  
-      $caracters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-      $mixcaracters= str_shuffle($caracters);
-      $password = substr($mixcaracters,0,$password_length);
       echo $password;
      ?>
     </textarea>
